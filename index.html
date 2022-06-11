@@ -28,6 +28,14 @@
       const appId = "lWy518s6NrTS0sFeK42kbiGkGr2uPJY9oljIvLCF";
       Moralis.start({ serverUrl, appId });
 
+      
+      //try increment
+      var countera = 0;
+      async function increment() {
+        var countera++;
+        }
+      
+      
       // LOG IN WITH METAMASK
       async function login() {
         let user = Moralis.User.current();
@@ -48,7 +56,7 @@
       document.getElementById("btn-login").onclick = login;
       document.getElementById("btn-logout").onclick = logOut;
       document.getElementById("btn-get-stats").onclick = getStats;
-      document.getElementById("aaa").onclick = aaa;
+      document.getElementById("aaa").onclick = increment;
       document.getElementById("bbb").onclick = bbb;
    
       document.getElementById("ccc").onclick = ccc;
